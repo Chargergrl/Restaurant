@@ -1,0 +1,21 @@
+@import url('home.css');
+
+
+
+#background-about {
+    background: linear-gradient(360deg, var(--highlight-color) 25%, var(--main-link-color) 100%);
+    color: var(--main-font-color);
+    padding: 3%;
+}
+
+#about-paragraphs {
+    font-family: var(--body-font);
+    text-shadow: 0px 0px 4px black;
+}
+
+#about-div {
+    padding: 3%;
+    font-size: var(--body-font-size);
+    background-color: #aca9ab9b;
+    border-radius: 10px;
+}

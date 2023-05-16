@@ -1,0 +1,67 @@
+@import url('home.css');
+
+#menu-background {
+  background: linear-gradient(360deg, var(--highlight-color) 25%, var(--main-link-color) 100%);
+  padding: 3%;
+}
+
+#menu-container {
+  background: #aca9ab9b;
+  border-radius: 10px;
+}
+
+#menu-item {
+  display: flex; /* Use flexbox layout */
+  align-items: center;
+  padding: 2%;
+  color: #fff;
+  text-shadow: 0px 0px 4px black;
+}
+
+#galactic-img, #lunar-wing {
+  border-radius: 10px;
+  flex-shrink: 0;
+  height: auto;
+  margin-right: 20px;
+}
+
+.menu-item-content {
+  flex-grow: 1; /* Allow the content to grow and occupy remaining space */
+}
+
+.chicken-item {
+  font-family: var(--body-font);
+  margin-top: 0; /* Remove default margin */
+  margin-bottom: 10px;
+}
+
+#chicken-paragraphs, #wing-paragraphs {
+  margin-top: 0;
+  font-size: var(--body-font-size);
+}
+
+/* Responsive */
+
+@media screen and (max-width: 900px) {
+  #menu-item {
+    flex-direction: column;
+  }
+  #galactic-img, #lunar-wing {
+    margin-right: 0;
+    margin-bottom: 10px;
+    height: 300px;
+
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #menu-item {
+    flex-direction: column; /* Stack elements vertically */
+  }
+
+  #galactic-img, #lunar-wing {
+    margin-right: 0; /* Remove the right margin for mobile view */
+    margin-bottom: 10px; /* Add some spacing between the image and the content */
+    height: 200px;
+  }
+}

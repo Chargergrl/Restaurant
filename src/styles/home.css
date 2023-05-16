@@ -1,0 +1,164 @@
+@font-face {
+    font-family: "myFont";
+    src: url("/src/ultra-font/ultra.otf");
+  }
+
+@font-face {
+    font-family: "Exo";
+    src: url("/src/Exo/Exo-VariableFont_wght.ttf")
+}
+  
+
+:root {
+    --main-font-color: #EBEBED;
+    --secondary-font-color: #1c0f00;
+    --main-link-color: #40444A;
+    --link-hover-color: #ACA9AB;
+    --text-shadow-color: #48403E;
+    --highlight-color: #7F7263;
+    --header-font: "myFont", sans-serif;
+    --body-font-size: clamp(1.5rem, 1.7rem, 1.9rem);
+    --body-font: "Exo";
+}
+
+
+body {
+    margin: 0;
+    background-color: black;
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    font-family: var(--body-font);
+}
+ 
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        background-color: #000000;
+    }
+    100% {
+        opacity: 1;
+        background-color: #000000;
+     }
+}
+
+
+
+.page-bg {
+    background: linear-gradient(360deg, var(--highlight-color) 25%, var(--main-link-color) 100%);
+    height: 100%;
+    padding: 3%;
+}
+
+#header {
+    font-size: clamp(1rem, 1.2rem, 1.8rem);
+    color: var(--main-font-color);
+    text-shadow: 0px 3px 5px #48403E;
+    font-family: var(--header-font);
+    letter-spacing: -0.05rem;
+    text-align: center;
+    padding: 3%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-name: moveUpDown;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; /* change direction of animation */
+    animation-timing-function: ease-in-out; /* adjust the speed of the animation */
+  }
+  
+  @keyframes moveUpDown {
+    from {
+      background-position: center -150px;
+    }
+  
+    to {
+      background-position: center -400px;
+    }
+  }
+
+#header-contain {
+    background-color: #1111125e;
+    isolation: isolate;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    border-radius: 20px;
+}
+
+.header-title {
+    margin: 0;
+    color: var(--main-font-color);
+}
+
+
+.header-links {
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 10000;
+}
+
+.header-link {
+   padding: 0px 32px;
+   border-radius: 10px;
+   background-color: var(--main-link-color);
+   color: var(--main-font-color);
+   border: none;
+   font-family: var(--body-font);
+   font-size: var(--body-font-size);
+   box-shadow: 0 0px 10px var(--text-shadow-color);
+}
+
+.header-link:hover {
+    background-color: var(--link-hover-color);
+    color: var(--secondary-font-color);
+    padding: 0px 40px;
+}
+
+/* Home Page */
+
+.home-contain {
+    display: flex;
+    align-items: center;
+    overflow: scroll;
+    background-color: #aca9ab9b;
+    padding: 3%;
+    padding: 2%;
+    color: #fff;
+    text-shadow: 0px 0px 4px black;
+    border-radius: 10px;
+}
+
+#rocket-img {
+    flex-shrink: 0; /* Prevent the image from shrinking */
+    width: 300px; /* Set the desired width of the image */
+    height: auto; /* Automatically adjust the height */
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+#homeDiv {
+    flex-grow: 1;
+}
+
+#home-paragraphs {
+    margin-top: 0; /* Remove default margin */
+    margin-bottom: 10px;
+    font-size: var(--body-font-size);
+}
+
+/* Responsive */
+
+@media screen and (max-width: 768px) {
+    .home-contain {
+      flex-direction: column;
+      padding: 2%; /* Adjust the padding for mobile view */
+    }
+  
+    #rocket-img {
+      margin-right: 0;
+      margin-bottom: 10px;
+      width: 75%;
+    }
+  }
